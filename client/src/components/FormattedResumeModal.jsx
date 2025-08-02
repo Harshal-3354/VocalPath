@@ -10,7 +10,7 @@ const FormattedResumeModal = ({ resumeText, onClose }) => {
     const fetchFormattedResume = async () => {
       try {
         const res = await fetch(
-          "http://localhost:5000/api/interview/format-resume",
+          "https://vocalpath.onrender.com/api/interview/format-resume",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
