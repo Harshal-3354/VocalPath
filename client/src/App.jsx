@@ -28,7 +28,7 @@ const App = () => {
   const startInterview = async (selectedRole) => {
     setRole(selectedRole);
 
-    const res = await fetch("http://localhost:5000/api/interview/start", {
+    const res = await fetch("https://vocalpath.onrender.com/api/interview/start", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -52,7 +52,7 @@ const App = () => {
     const updatedHistory = [...history];
     updatedHistory[updatedHistory.length - 1].answer = finalAnswer;
 
-    const res = await fetch("http://localhost:5000/api/interview/respond", {
+    const res = await fetch("https://vocalpath.onrender.com/api/interview/respond", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -80,7 +80,7 @@ const App = () => {
 
   const concludeInterview = async (finalHistory) => {
     try {
-      const res = await fetch("http://localhost:5000/api/interview/conclude", {
+      const res = await fetch("https://vocalpath.onrender.com/api/interview/conclude", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
